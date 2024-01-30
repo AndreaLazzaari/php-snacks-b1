@@ -18,3 +18,4 @@ $descrizione = 'Si dice che la fiamma di Charizard abbia una temperatura tanto p
 $megaevoluzione = true
 
 ?>
+
