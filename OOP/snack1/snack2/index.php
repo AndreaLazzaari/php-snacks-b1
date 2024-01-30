@@ -20,12 +20,24 @@ class Persona{
     }
 
 
-    function setAge(){
-        return intval($this->age);
-
+    public function setAge($age){
+       if ( !is_int($age) ){
+        throw new Exception('il numero inserito non è un numero intero');
+    } else {
+        $this->age = $age;
     }
+}
 
+
+$persona = new Persona();
+
+try {
+    $persona->setAge('ciao');
+} catch (Throwable $e){
+    echo 'Errore nella mia età' . $e->getMessage();
+}
 
 }
 
-?>
+
+
