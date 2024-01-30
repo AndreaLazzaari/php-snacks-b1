@@ -4,6 +4,12 @@ che accetti esclusivamente un numero intero.
 Se il numero inserito come argomento non dovesse essere un numero intero: allora lanciare un'eccezione! -->
 
 
+
+<!-- Parte 2:
+Includendo con try e catch una chiamata a setAge con una stringa come argomento,
+catturare l'eccezione e invece di emettere un errore bloccante, scrivere in pagina il messaggio di errore. -->
+
+
 <?php
 
 class Persona{
@@ -14,8 +20,8 @@ class Persona{
     }
 
 
-    function setAge(num){
-        $this->_age=num;
+    function setAge(){
+        return intval($this->age);
 
     }
 
